@@ -39,7 +39,6 @@ def merge(arr, start, mid, end):
     return
 
 
-
 n = int(input())
 arr = []
 for i in range(n):
