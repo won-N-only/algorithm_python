@@ -41,8 +41,14 @@ def merge(arr, start, mid, end):
 
 n = int(input())
 arr = []
+idx=1
 for i in range(n):
     arr.append(int(input()))
-m_sort(arr)
+for i in range(len(arr)-1):
+    if arr[i]>arr[i+1]:
+        idx+=1
+if idx==len(arr):
+    m_sort(arr)
+else: arr.sort()
 for i in range(len(arr)):
     print(arr[i])
