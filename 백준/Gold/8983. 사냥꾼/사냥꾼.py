@@ -7,7 +7,7 @@ def input():
 
 def endangered(arr, lf, rt, obj):
     mid = (lf+rt)//2
-    if rt <= lf:
+    if rt < lf:
         return mid
     if arr[mid] == obj:
         return mid
@@ -26,6 +26,15 @@ big_game = 0
 
 for i in range(n):
     animal.append(list(map(int, input().split())))
+
+animal.sort(key=lambda x: x[1])
+for i in range(n):
+    if animal[i][1] > l:
+        del animal[i:]
+        break
+
+n = len(animal)
+
 for i in range(n):
     ex = endangered(posi, 0, m-1, animal[i][0])
     if abs(posi[ex]-animal[i][0])+animal[i][1] <= l:
