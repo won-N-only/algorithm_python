@@ -1,3 +1,9 @@
+import sys
+
+
+def input():
+    return sys.stdin.readline().strip()
+
 t = int(input())
 brackets = []
 for i in range(t):
