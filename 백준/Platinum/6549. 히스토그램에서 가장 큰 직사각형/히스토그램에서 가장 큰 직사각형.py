@@ -1,3 +1,10 @@
+import sys
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
 def sizing_histogram(height):
 
     stk = []
@@ -30,12 +37,14 @@ def sizing_histogram(height):
     return max_area
 
 
+n = [1]
 while True:
     n = list(map(int, input().split()))
-    if n[0] == 0:  # 첫 번째 숫자가 0이면 반복 종료
+    if n[0] == 0:
         break
-    # 첫 번째 숫자를 제외한 나머지 높이 정보를 함수에 전달
     testcase = n[1:]
-    result = sizing_histogram(testcase)
-    print(result)
+    ans = sizing_histogram(testcase)
+    print(ans)
 
+# --------------출력부분 변경-------------#
+  
