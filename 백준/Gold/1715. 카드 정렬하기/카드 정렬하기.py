@@ -12,8 +12,8 @@ def card_suffle(cardlist, n):
     while len(cardlist) >= 2:
         sum_cards = 0
 
-        sum_cards += heapq.heappop(cardlist)
-        sum_cards += heapq.heappop(cardlist)
+        sum_cards += heapq.heappop(cardlist)   + heapq.heappop(cardlist)
+
 
         temp += sum_cards
         heapq.heappush(cardlist, sum_cards)
