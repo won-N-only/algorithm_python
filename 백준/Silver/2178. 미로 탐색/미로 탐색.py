@@ -6,11 +6,10 @@ def input():
     return sys.stdin.readline().strip()
 
 
-def dfs(x, y, arr, visit):
+def dfs(x, y, arr):
     dx, dy = [1, 0, -1, 0], [0, 1, 0, -1]
     q = deque([(x, y)])
     arr[x][y] = 0
-    visit.add((x, y))
     dis = [[0]*m for i in range(n)]
     dis[x][y] = 1
     while q:
@@ -20,21 +19,20 @@ def dfs(x, y, arr, visit):
         for i in range(4):
             px = x+dx[i]
             py = y+dy[i]
-            if (0 <= px < n) and (0 <= py < m) and arr[px][py] == 1 and (px, py)not in visit:
-                visit.add((px, py))
+            if (0 <= px < n) and (0 <= py < m) and arr[px][py] == 1:
                 q.append((px, py))
+                # 도수분포표 활용함
+                arr[px][py] = 0
+
                 dis[px][py] = dis[x][y] + 1
-                # if (px, py) == (n, m):
-                #     return dis[px][py]
     return dis[x][y]
 
 
 n, m = map(int, input().split())
 
-visit = set([])
 maze = [[]for i in range(n)]
 for i in range(n):
     maze[i] = [int(i) for i in input()]
 end = (n, m)
-cnt = dfs(0, 0, maze, visit)
+cnt = dfs(0, 0, maze)
 print(cnt)
