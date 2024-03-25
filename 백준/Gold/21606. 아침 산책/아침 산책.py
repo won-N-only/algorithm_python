@@ -13,12 +13,13 @@ def dfs(start, arr, visit):
     while stk:
         curr = stk.pop()
         for next in arr[curr]:
-            if next not in visit and a[next] == 0:
-                stk.append(next)
-            elif next not in visit and a[next] == 1:
-                visit.add(next)
-                trail += 1
-                continue
+            if next not in visit:
+                if a[next] == 0:
+                    stk.append(next)
+                elif a[next] == 1:
+                    visit.add(next)
+                    trail += 1
+                    continue
     return trail
 
 
