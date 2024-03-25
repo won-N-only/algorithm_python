@@ -1,29 +1,41 @@
 import heapq
 
+# 이거 왜 dijktra로 최소값이 나오는지 이해가 안됨
+# 가중치가 있는걸 heap에 넣으니까 최소가중치를 가진것만 나오고
+# 따로 갱신안해주고 black일때만 +=1해줘도 답나옴
 
-def dijkstra(maze):
-    n = len(maze)
-    change = [[float('inf')] * n for _ in range(n)]
-    change[0][0] = 0
-    q = [(0, 0, 0)]
 
-    dx = [1, -1, 0, 0]
-    dy = [0, 0, 1, -1]
+def chk(x, y):
+    return (0 <= x < n) and (0 <= y < n)
+
+
+def dijkstra(x, y):
+    q = []
+    dx = [0, 1, 0, -1]
+    dy = [1, 0, -1, 0]
+    visit = [[-1]*n for i in range(n)]
+
+    heapq.heappush(q, (0, x, y))
+    visit[x][y] = 1
 
     while q:
-        cnt, x, y = heapq.heappop(q)
-        if x == n-1 and y == n-1:
-            return cnt
+        w, cx, cy = heapq.heappop(q)
+        if cx == n-1 and cy == n-1:
+            return w
+
         for i in range(4):
-            nx, ny = x + dx[i], y + dy[i]
-            if 0 <= nx < n and 0 <= ny < n:
-                next_cnt = cnt + 1 if maze[nx][ny] == 0 else cnt
-                if next_cnt < change[nx][ny]:
-                    change[nx][ny] = next_cnt
-                    heapq.heappush(q, (next_cnt, nx, ny))
-    return change[n-1][n-1]
+            nx = cx+dx[i]
+            ny = cy+dy[i]
+            if chk(nx, ny) and visit[nx][ny] == -1:
+                visit[nx][ny] = 1
+
+                if maze[nx][ny] == 1:
+                    heapq.heappush(q, (w, nx, ny))
+                else:
+                    heapq.heappush(q, (w+1, nx, ny))
 
 
 n = int(input())
+
 maze = [list(map(int, input())) for _ in range(n)]
-print(dijkstra(maze))
+print(dijkstra(0, 0))
