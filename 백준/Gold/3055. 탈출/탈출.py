@@ -23,23 +23,15 @@ def chk_curr(a, b, arr):
 
 def chk_map():
     global echidna_x, echidna_y, beaver_x, beaver_y, water
+    water=[]
     for i, row in enumerate(twforest):
         for j, x in enumerate(row):
             if x == "S":
                 echidna_x = j
                 echidna_y = i
-                break
-
-    for i, row in enumerate(twforest):
-        for j, x in enumerate(row):
             if x == "D":
                 beaver_x = j
                 beaver_y = i
-                break
-
-    water = []
-    for i, row in enumerate(twforest):
-        for j, x in enumerate(row):
             if x == "*":
                 water.append((j, i))
                 continue
@@ -57,9 +49,8 @@ def bfs(day, x, y, arr):
 
     while q:
 
-        for i in range(len(wq)):
+        for _ in range(len(wq)):
             cwx, cwy = wq.popleft()
-
             for i in range(4):
                 nwx = cwx+dx[i]
                 nwy = cwy+dy[i]
@@ -67,13 +58,12 @@ def bfs(day, x, y, arr):
                     if arr[nwy][nwx] != "D":
                         arr[nwy][nwx] = "*"
                         wq.append((nwx, nwy))
+
+        # 이거 넣어서 날짜별로움직이게함
         for _ in range(len(q)):
-
             cday, cx, cy = q.popleft()
-
             if (cx, cy) == (beaver_x, beaver_y):
                 return cday
-
             for i in range(4):
                 nx = cx+dx[i]
                 ny = cy+dy[i]
