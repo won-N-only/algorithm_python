@@ -1,37 +1,39 @@
+import sys
+
 from collections import deque
 
-# 입력 받기
-M, N, H = map(int, input().split())
-tomatoes = [[[int(x) for x in input().split()] for _ in range(N)] for _ in range(H)]
 
-# BFS 준비
-queue = deque()
-for h in range(H):
-    for n in range(N):
-        for m in range(M):
-            if tomatoes[h][n][m] == 1:
-                queue.append((h, n, m, 0))  # (z, y, x, days)
+def input():
+    return sys.stdin.readline().strip()
 
-# 방향 벡터
-dz = [-1, 1, 0, 0, 0, 0]
-dx = [0, 0, -1, 1, 0, 0]
-dy = [0, 0, 0, 0, -1, 1]
 
-# BFS 실행
+m, n, h = map(int, input().split())
+tomatoes = [[[int(x) for x in input().split()]
+             for _ in range(n)] for _ in range(h)]
+
+q = deque()
+for hh in range(h):
+    for nn in range(n):
+        for mm in range(m):
+            if tomatoes[hh][nn][mm] == 1:
+                # h,n,m = z,y,x 임. . . .. .
+                q.append((hh, nn, mm, 0))
+
+dz, dx, dy = [1, -1, 0, 0, 0, 0], [0, 0, 1, -1, 0, 0], [0, 0, 0, 0, 1, -1]
+
 max_days = 0
-while queue:
-    z, y, x, days = queue.popleft()
+while q:
+    z, y, x, days = q.popleft()
     for i in range(6):
-        nz, ny, nx = z + dz[i], y + dy[i], x + dx[i]
-        if 0 <= nz < H and 0 <= ny < N and 0 <= nx < M and tomatoes[nz][ny][nx] == 0:
-            tomatoes[nz][ny][nx] = 1
-            max_days = max(max_days, days + 1)
-            queue.append((nz, ny, nx, days + 1))
+        cz, cx, cy = z+dz[i], x+dx[i], y+dy[i]
+        if 0 <= cz < h and 0 <= cx < m and 0 <= cy < n and tomatoes[cz][cy][cx] == 0:
+            tomatoes[cz][cy][cx] = 1
+            max_days = max(max_days, days+1)
+            q.append((cz, cy, cx, days+1))
 
-# 모든 토마토가 익었는지 확인
-for h in tomatoes:
-    for n in h:
-        if 0 in n:
+for h2 in tomatoes:
+    for n2 in h2:
+        if 0 in n2:
             print(-1)
             exit(0)
 
