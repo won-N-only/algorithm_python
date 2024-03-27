@@ -8,16 +8,13 @@ def input():
 
 def bfs(start):
     q = deque([(start, 1)])
-    visit = set([start])
+    visit.add(start)
     while q:
         ccost, cidx = q.popleft()
 
         for next in coins:
             if ccost+next not in visit:
-                if next > k or cidx > k:
-                    exit()
-
-                elif ccost+next < k:
+                if ccost+next < k:
                     q.append((ccost+next, cidx+1))
                     visit.add(ccost+next)
 
@@ -28,13 +25,13 @@ def bfs(start):
 
 
 n, k = map(int, input().split())
-
+visit = set([])
 coins = set()
 for i in range(n):
     a = int(input())
     if a < k:
         coins.add(a)
-    elif a==k:
+    elif a == k:
         print(1)
         exit()
 coins = sorted(list(coins), reverse=True)
