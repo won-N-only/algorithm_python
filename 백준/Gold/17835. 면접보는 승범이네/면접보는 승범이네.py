@@ -40,4 +40,4 @@ distances = navigating()
 
 max_distance = max(distances)
 max_city = distances.index(max_distance)
-print(max_city, max_distance, sep="\n")
+print(max_city, max_distance)
