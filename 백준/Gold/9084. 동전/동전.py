@@ -2,13 +2,10 @@ def moneycoin(arr, o):
     dp = [0]*(o+1)
     dp[0] = 1
 
-    wallet = arr[:]
-    for coin in wallet:
-        temp = dp[:]
-
+    for coin in arr:
         for j in range(coin, o+1):
-            temp[j] += temp[j-coin]
-        dp = temp
+            dp[j] += dp[j-coin]
+            
     return print(dp[o])
 
 
