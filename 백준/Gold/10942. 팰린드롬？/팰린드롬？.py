@@ -1,5 +1,4 @@
 import sys
-sys.setrecursionlimit(10**6)
 
 
 def input():
@@ -7,18 +6,16 @@ def input():
 
 
 def palin(a, b):
-    if a >= b:
+    if a >= b:  
         return 1
-
-    if dp[a][b] != -1:
+    if dp[a][b] != -1:  
         return dp[a][b]
-    
-    if num[a] == num[b]:
+    if num[a] == num[b]:  
         dp[a][b] = palin(a + 1, b - 1)
-    else:
+    else:  
         dp[a][b] = 0
-
     return dp[a][b]
+
 
 
 n = int(input())
