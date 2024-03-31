@@ -1,5 +1,6 @@
 import sys
 
+sys.setrecursionlimit(10**6)
 
 def input():
     return sys.stdin.readline().strip()
