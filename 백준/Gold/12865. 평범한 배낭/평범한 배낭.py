@@ -15,14 +15,6 @@ def mybag(n, k, arr):
     return dp[n][k]
 
 
-def my_wallet(n, k, arr):
-    dp2 = [0] * (k+1)
-    for i in range(1, n+1):
-        for w in range(k, 0, -1):
-            if arr[i-1][0] <= w:
-                dp2[w] = max(dp2[w], dp2[w-arr[i-1][0]] + arr[i-1][1])
-    return dp2[n]
-
 
 n, k = map(int, input().split())
 # 이거 dp = [[0]*(k+1)]*(n+1)이렇게만들면 [0]이 다 같은 곳을 참조해서 안됨
@@ -35,8 +27,6 @@ for _ in range(n):
 
 not_in_bag.sort()
 
-
 ans = mybag(n, k, not_in_bag)
-ans2 = my_wallet(n, k, not_in_bag)
 
 print(ans)
