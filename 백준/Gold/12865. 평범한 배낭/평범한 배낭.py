@@ -6,13 +6,16 @@ def input():
 
 
 
-
 def my_wallet(k, arr):
     dp2 = [0] * (k+1)
 
     for wei, v in arr:
-        for w in range(k, wei-1, -1):
-            dp2[w] = max(dp2[w], dp2[w-wei] + v)
+        # for w in range(k, wei-1, -1):
+        #     dp2[w] = max(dp2[w], dp2[w-wei] + v)
+        temp = dp2[:]
+        for w in range(wei, k+1):
+            temp[w] = max(dp2[w], dp2[w-wei] + v)
+        dp2 = temp
     return max(dp2)
 
 
