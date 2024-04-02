@@ -8,18 +8,20 @@ def input():
 # 컵라면, 데드라인 순
 
 
+
 def ramen_heap(arr):
     cnt = 0
     baguni = []
 
     for dL, cup in arr:
-   
-        heapq.heappush(baguni, cup)
-        cnt += cup
+        if len(baguni) < dL:
+            heapq.heappush(baguni, cup)
+            cnt += cup
 
-        if len(baguni) > dL:
-            cnt -= heapq.heappop(baguni)
-
+        elif baguni[0] < cup:
+            trash = heapq.heappop(baguni)
+            heapq.heappush(baguni, cup)
+            cnt += (cup-trash)
     return cnt
 
 
