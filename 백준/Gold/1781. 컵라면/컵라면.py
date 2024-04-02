@@ -8,22 +8,18 @@ def input():
 # 컵라면, 데드라인 순
 
 
-
-def ramen_heap(arr):
+def no_jug(arr):
     cnt = 0
     baguni = []
 
     for dL, cup in arr:
-        if len(baguni) < dL:
-            heapq.heappush(baguni, cup)
-            cnt += cup
+        heapq.heappush(baguni, cup)
+        cnt += cup
 
-        elif baguni[0] < cup:
+        if len(baguni) > dL:
             trash = heapq.heappop(baguni)
-            heapq.heappush(baguni, cup)
-            cnt += (cup-trash)
+            cnt -= trash
     return cnt
-
 
 
 n = int(input())
@@ -34,5 +30,5 @@ for i in range(n):
     ramen.append([a, b])
 ramen.sort()
 
-ans1 = ramen_heap(ramen)
+ans1 = no_jug(ramen)
 print(ans1)
