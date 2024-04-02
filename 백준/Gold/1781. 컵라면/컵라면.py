@@ -12,19 +12,16 @@ def ramen_heap(arr):
     cnt = 0
     baguni = []
 
-    for i in range(n):
-        dL = arr[i][0]
-        cup = arr[i][1]
+    for dL, cup in arr:
+   
+        heapq.heappush(baguni, cup)
+        cnt += cup
 
-        if len(baguni) < dL:
-            heapq.heappush(baguni, cup)
-            cnt += cup
+        if len(baguni) > dL:
+            cnt -= heapq.heappop(baguni)
 
-        elif baguni[0] < cup:
-            trash = heapq.heappop(baguni)
-            heapq.heappush(baguni, cup)
-            cnt += (cup-trash)
     return cnt
+
 
 
 n = int(input())
