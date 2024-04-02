@@ -10,19 +10,22 @@ def input():
 
 def ramen_heap(arr):
     cnt = 0
-    r_cnt = 0
     baguni = []
     heapq.heapify(baguni)
+
+
     for i in range(n):
-        if len(baguni) < arr[i][0]:
-            heapq.heappush(baguni, [arr[i][1], arr[i][0]])
-            r_cnt += arr[i][1]
-        else:
-            if baguni[0][0] < arr[i][1]:
+        dL=arr[i][0]
+        cup=arr[i][1]
+        if len(baguni) < dL:
+            heapq.heappush(baguni, [cup, dL])
+            cnt += cup
+
+        elif baguni[0][0] < cup:
                 trash = heapq.heappop(baguni)
-                heapq.heappush(baguni, [arr[i][1], arr[i][0]])
-                r_cnt += (arr[i][1]-trash[0])
-    return r_cnt
+                heapq.heappush(baguni, [cup, dL])
+                cnt += (cup-trash[0])
+    return cnt
 
 
 n = int(input())
@@ -30,7 +33,8 @@ n = int(input())
 ramen = []
 for i in range(n):
     a, b = (map(int, input().split()))
-    ramen.append([a,b])
+    ramen.append([a, b])
 ramen.sort()
+
 ans1 = ramen_heap(ramen)
 print(ans1)
