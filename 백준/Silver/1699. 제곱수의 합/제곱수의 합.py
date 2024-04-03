@@ -1,8 +1,7 @@
 import sys
 
 
-def input():
-    return sys.stdin.readline().strip()
+
 
 
 def square(n):
@@ -16,7 +15,7 @@ def square(n):
     return dp[n]
 
 
-n = int(input())
+n = int(sys.stdin.readline().strip())
 dp = [0]*(n+1)
 ans=square(n)
 print(ans)
