@@ -1,0 +1,27 @@
+//WSL기준
+////imp
+1. Fst fit 
+44 (util) + 30 (thru) = 75/100
+
+2. Fst fit, chunk=(1<<6)
+46 (util) + 29 (thru) = 76/100
+
+3. next-fit 
+45 (util) + 35 (thru) = 81/100
+
+4. best-fit 
+47 (util) + 30 (thru) = 77/100
+
+5. next-fit, chunksize (1 <<11)     
+45 (util) + 37 (thru) = 84/100
+
+///exp
+
+6. first-fit
+45 (util) + 40 (thru) = 85/100
+
+7. *best-fit*
+46 (util) + 40 (thru) = 86/100
+
+8. add-order
+45 (util) + 40 (thru) = 85/100
