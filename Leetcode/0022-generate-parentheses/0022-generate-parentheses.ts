@@ -1,26 +1,20 @@
-type stack = {curr: string; open: number; close: number};
 function generateParenthesis(n: number): string[] {
-  let ans: string[] = [];
-  let stack: stack[] = [];
+  const ans: string[] = [];
 
-  stack.push({curr: "", open: 0, close: 0});
-
-  while (stack.length) {
-    let {curr, open, close} = stack.pop()!;
-    console.log("이게 stack %s", JSON.stringify(stack));
-
-    if (curr.length == 2 * n) {
-      ans.push(curr);
-      continue;
+  function bt(current: string, open: number, close: number) {
+    if (current.length === 2 * n) {
+      ans.push(current);
+      return;
     }
 
     if (open < n) {
-      stack.push({curr: curr + "(", open: open + 1, close});
+      bt(current + "(", open + 1, close);
     }
     if (close < open) {
-      stack.push({curr: curr + ")", open, close: close + 1});
+      bt(current + ")", open, close + 1);
     }
   }
 
+  bt("", 0, 0);
   return ans;
 }
