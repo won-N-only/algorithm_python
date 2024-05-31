@@ -1,51 +1,24 @@
-/**
- * @param {number[][]} points
- * @return {number}
- */
-var minTimeToVisitAllPoints = function(points) {
-    let time = 0;
+function minTimeToVisitAllPoints(points: number[][]): number {
+  let time: number = 0;
+  let me: number[] = points[0];
 
-    for(let i = 0; i < points.length-1; i++) {
-      let start = points[i];
-      let end = points[i+1];
-      while(end[0]-start[0] > 0 && end[1]-start[1] > 0) {
-        start[0]++;
-        start[1]++;
-        time++;
-      }
-      while(end[0]-start[0] < 0 && end[1]-start[1] < 0) {
-        start[0]--;
-        start[1]--;
-        time++;
-      }      
-        while(end[0]-start[0] > 0 && end[1]-start[1] < 0) {
-        start[0]++;
-        start[1]--;
-        time++;
-      }
-      while(end[0]-start[0] <0 && end[1]-start[1] > 0) {
-        start[0]--;
-        start[1]++;
-        time++;
-      }
-      while(end[0]-start[0] > 0) {
-        start[0]++;
-        time++;
-      }
-      while(end[0]-start[0] < 0) {
-        start[0]--;
-        time++;
-      }
-      while(end[1]-start[1] > 0) {
-        start[1]++;
-        time++;
-      }
-      while(end[1]-start[1] < 0) {
-        start[1]--;
-        time++;
-      }
-    }
-    return time;
-};
+  for (let i: number = 1; i < points.length; i++) {
+    const target = points[i];
 
-console.log(minTimeToVisitAllPoints([[1,1],[3,4],[-1,0]]));
+    let dx = Math.abs(target[0] - me[0]);
+    let dy = Math.abs(target[1] - me[1]);
+    time += Math.max(dx, dy);
+
+    me = target;
+  }
+
+  return time;
+}
+
+let points: number[][] = [
+  [1, 1],
+  [3, 4],
+  [-1, 0],
+];
+
+console.log(minTimeToVisitAllPoints(points));
