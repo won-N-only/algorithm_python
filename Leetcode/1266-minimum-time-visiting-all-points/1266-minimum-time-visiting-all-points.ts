@@ -1,24 +1,20 @@
-function minTimeToVisitAllPoints(points: number[][]): number {
-  let time: number = 0;
-  let me: number[] = points[0];
+ 
+var minTimeToVisitAllPoints = function (points: number[][]): number {
+  let time = 0;
 
-  for (let i: number = 1; i < points.length; i++) {
-    const target = points[i];
+  for (let i = 0; i < points.length - 1; i++) {
+    let start = points[i];
+    let end = points[i + 1];
+    while (start[0] !== end[0] || start[1] !== end[1]) {
+      if (start[0] < end[0]) start[0]++;
+      else if (start[0] > end[0]) start[0]--;
 
-    let dx = Math.abs(target[0] - me[0]);
-    let dy = Math.abs(target[1] - me[1]);
-    time += Math.max(dx, dy);
+      if (start[1] < end[1]) start[1]++;
+      else if (start[1] > end[1]) start[1]--;
 
-    me = target;
+      time++;
+    }
   }
-
   return time;
-}
-
-let points: number[][] = [
-  [1, 1],
-  [3, 4],
-  [-1, 0],
-];
-
-console.log(minTimeToVisitAllPoints(points));
+};
+ 
