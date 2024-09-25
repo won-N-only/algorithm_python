@@ -15,6 +15,9 @@
 |0034-find-first-and-last-position-of-element-in-sorted-array|[링크](./Leetcode/0034-find-first-and-last-position-of-element-in-sorted-array/README.md)|
 |0042-trapping-rain-water|[링크](./Leetcode/0042-trapping-rain-water/NOTES.md)|
 |0056-merge-intervals|[링크](./Leetcode/0056-merge-intervals/NOTES.md)|
+|0070-climbing-stairs|[링크](./Leetcode/0070-climbing-stairs/README.md)|
+|0200-number-of-islands|[링크](./Leetcode/0200-number-of-islands/0200-number-of-islands.ts)|
+|0207-course-schedule|[링크](./Leetcode/0207-course-schedule/README.md)|
 |0209-minimum-size-subarray-sum|[링크](./Leetcode/0209-minimum-size-subarray-sum/README.md)|
 |0215-kth-largest-element-in-an-array|[링크](./Leetcode/0215-kth-largest-element-in-an-array/README.md)|
 |0300-longest-increasing-subsequence|[링크](./Leetcode/0300-longest-increasing-subsequence/README.md)|
@@ -22,7 +25,9 @@
 |0456-132-pattern|[링크](./Leetcode/0456-132-pattern/NOTES.md)|
 |0560-subarray-sum-equals-k|[링크](./Leetcode/0560-subarray-sum-equals-k/0560-subarray-sum-equals-k.ts)|
 |1266-minimum-time-visiting-all-points|[링크](./Leetcode/1266-minimum-time-visiting-all-points/NOTES.md)|
+|1436-destination-city|[링크](./Leetcode/1436-destination-city/README.md)|
 |1800-maximum-ascending-subarray-sum|[링크](./Leetcode/1800-maximum-ascending-subarray-sum/1800-maximum-ascending-subarray-sum.cpp)|
+|2280-minimum-lines-to-represent-a-line-chart|[링크](./Leetcode/2280-minimum-lines-to-represent-a-line-chart/2280-minimum-lines-to-represent-a-line-chart.ts)|
 |3151-special-array-i|[링크](./Leetcode/3151-special-array-i/3151-special-array-i.ts)|
 ## 📚 백준
 ### 🚀 Bronze
