@@ -3,25 +3,27 @@
 import os
 from urllib import parse
 
-HEADER = """# 
+HEADER="""# 
 # 리트코드, 백준 문제 풀이 목록
 
 git actions을 사용해 만들었습니다.
-리트코드에선 TypeScript, 백준에서는 Python3을 이용해 풀이했습니다.
+LeetCode에서는 TypeScript, 백준에서는 Python3을 이용해 풀이했습니다.
 
 ## 목차
-- [📚 Leetcode](#-leetcode)
-- [📚 백준](#-백준)
-
-
+- [🤔 Leetcode](#-leetcode)
+- [🤔 백준](#-백준)
+    -[🚀 Bronze](#-Bronze)
+    -[🚀 Silver](#-Silver)
+    -[🚀 Gold](#-Gold)
+    -[🚀 Platinum](#-Platinum)
 """
 
 def main():
     content = ""
     content += HEADER
     
-    directories = []
-    solveds = []
+    directories = [];
+    solveds = [];
 
     for root, dirs, files in os.walk("."):
         dirs.sort()
@@ -44,8 +46,8 @@ def main():
             continue
             
         if directory not in directories:
-            if directory in ["백준", "프로그래머스","Leetcode"]:
-                content += "## 📚 {}\n".format(directory)
+            if directory in ["백준", "프로그래머스", "LeetCode"]:
+                content += "## 🤔 {}\n".format(directory)
             else:
                 content += "### 🚀 {}\n".format(directory)
                 content += "| 문제번호 | 링크 |\n"
@@ -53,7 +55,10 @@ def main():
             directories.append(directory)
 
         for file in files:
-            content += "|{}|[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
+            if category not in solveds:
+                content += "|{}|[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
+                solveds.append(category)
+                print("category : " + category)
 
     with open("README.md", "w") as fd:
         fd.write(content)
