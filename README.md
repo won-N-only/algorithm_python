@@ -17,11 +17,13 @@
 |0056-merge-intervals|[링크](./Leetcode/0056-merge-intervals/NOTES.md)|
 |0209-minimum-size-subarray-sum|[링크](./Leetcode/0209-minimum-size-subarray-sum/README.md)|
 |0215-kth-largest-element-in-an-array|[링크](./Leetcode/0215-kth-largest-element-in-an-array/README.md)|
+|0300-longest-increasing-subsequence|[링크](./Leetcode/0300-longest-increasing-subsequence/README.md)|
 |0412-fizz-buzz|[링크](./Leetcode/0412-fizz-buzz/0412-fizz-buzz.ts)|
 |0456-132-pattern|[링크](./Leetcode/0456-132-pattern/NOTES.md)|
 |0560-subarray-sum-equals-k|[링크](./Leetcode/0560-subarray-sum-equals-k/0560-subarray-sum-equals-k.ts)|
 |1266-minimum-time-visiting-all-points|[링크](./Leetcode/1266-minimum-time-visiting-all-points/NOTES.md)|
-|1800-maximum-ascending-subarray-sum|[링크](./Leetcode/1800-maximum-ascending-subarray-sum/README.md)|
+|1800-maximum-ascending-subarray-sum|[링크](./Leetcode/1800-maximum-ascending-subarray-sum/1800-maximum-ascending-subarray-sum.cpp)|
+|3151-special-array-i|[링크](./Leetcode/3151-special-array-i/3151-special-array-i.ts)|
 ## 📚 백준
 ### 🚀 Bronze
 | 문제번호 | 링크 |
