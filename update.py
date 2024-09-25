@@ -6,6 +6,7 @@ from urllib import parse
 HEADER="""# 
 # 리트코드, 백준 문제 풀이 목록
 
+git actions을 사용해 만들었습니다
 """
 
 def main():
