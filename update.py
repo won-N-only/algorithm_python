@@ -8,6 +8,12 @@ HEADER = """#
 
 git actions을 사용해 만들었습니다.
 리트코드에선 TypeScript, 백준에서는 Python3을 이용해 풀이했습니다.
+
+## 목차
+- [📚 Leetcode](#-leetcode)
+- [📚 백준](#-백준)
+
+
 """
 
 def main():
@@ -42,17 +48,12 @@ def main():
                 content += "## 📚 {}\n".format(directory)
             else:
                 content += "### 🚀 {}\n".format(directory)
-                content += "<details>\n<summary>문제 목록 보기</summary>\n\n"
                 content += "| 문제번호 | 링크 |\n"
                 content += "| ----- | ----- |\n"
             directories.append(directory)
 
         for file in files:
             content += "|{}|[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
-
-        # 디렉토리 목록이 끝나면 <details> 태그를 닫음
-        if directory not in ["백준", "프로그래머스","Leetcode"]:
-            content += "\n</details>\n"
 
     with open("README.md", "w") as fd:
         fd.write(content)
