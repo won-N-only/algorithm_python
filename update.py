@@ -12,10 +12,10 @@ LeetCode에서는 TypeScript, 백준에서는 Python3을 이용해 풀이했습�
 ## 목차
 - [🤔 Leetcode](#-leetcode)
 - [🤔 백준](#-백준)
-    -[🚀 Bronze](#-Bronze)
-    -[🚀 Silver](#-Silver)
-    -[🚀 Gold](#-Gold)
-    -[🚀 Platinum](#-Platinum)
+    - [🚀 Bronze](#-Bronze)
+    - [🚀 Silver](#-Silver)
+    - [🚀 Gold](#-Gold)
+    - [🚀 Platinum](#-Platinum)
 """
 
 def main():
