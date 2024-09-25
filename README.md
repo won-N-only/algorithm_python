@@ -26,8 +26,11 @@
 |0560-subarray-sum-equals-k|[링크](./Leetcode/0560-subarray-sum-equals-k/0560-subarray-sum-equals-k.ts)|
 |1266-minimum-time-visiting-all-points|[링크](./Leetcode/1266-minimum-time-visiting-all-points/NOTES.md)|
 |1436-destination-city|[링크](./Leetcode/1436-destination-city/README.md)|
+|1582-special-positions-in-a-binary-matrix|[링크](./Leetcode/1582-special-positions-in-a-binary-matrix/1582-special-positions-in-a-binary-matrix.ts)|
 |1800-maximum-ascending-subarray-sum|[링크](./Leetcode/1800-maximum-ascending-subarray-sum/1800-maximum-ascending-subarray-sum.cpp)|
 |2280-minimum-lines-to-represent-a-line-chart|[링크](./Leetcode/2280-minimum-lines-to-represent-a-line-chart/2280-minimum-lines-to-represent-a-line-chart.ts)|
+|2733-neither-minimum-nor-maximum|[링크](./Leetcode/2733-neither-minimum-nor-maximum/2733-neither-minimum-nor-maximum.ts)|
+|2873-maximum-value-of-an-ordered-triplet-i|[링크](./Leetcode/2873-maximum-value-of-an-ordered-triplet-i/2873-maximum-value-of-an-ordered-triplet-i.ts)|
 |3151-special-array-i|[링크](./Leetcode/3151-special-array-i/3151-special-array-i.ts)|
 ## 📚 백준
 ### 🚀 Bronze
