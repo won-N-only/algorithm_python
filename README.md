@@ -94,6 +94,8 @@ git actions을 사용해 만들었습니다.
 
 </details>
 ## 📚 백준
+
+</details>
 ### 🚀 Bronze
 <details>
 <summary>문제 목록 보기</summary>
@@ -164,6 +166,8 @@ git actions을 사용해 만들었습니다.
 
 </details>
 |4153. 직각삼각형|[링크](./%EB%B0%B1%EC%A4%80/Bronze/4153.%E2%80%85%EC%A7%81%EA%B0%81%EC%82%BC%EA%B0%81%ED%98%95/%EC%A7%81%EA%B0%81%EC%82%BC%EA%B0%81%ED%98%95.py)|
+
+</details>
 
 </details>
 ### 🚀 Gold
@@ -307,6 +311,8 @@ git actions을 사용해 만들었습니다.
 |9252. LCS 2|[링크](./%EB%B0%B1%EC%A4%80/Gold/9252.%E2%80%85LCS%E2%80%852/LCS%E2%80%852.py)|
 
 </details>
+
+</details>
 ### 🚀 Platinum
 <details>
 <summary>문제 목록 보기</summary>
@@ -317,6 +323,8 @@ git actions을 사용해 만들었습니다.
 
 </details>
 |6549. 히스토그램에서 가장 큰 직사각형|[링크](./%EB%B0%B1%EC%A4%80/Platinum/6549.%E2%80%85%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%E2%80%85%EA%B0%80%EC%9E%A5%E2%80%85%ED%81%B0%E2%80%85%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95/%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%E2%80%85%EA%B0%80%EC%9E%A5%E2%80%85%ED%81%B0%E2%80%85%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95.py)|
+
+</details>
 
 </details>
 ### 🚀 Silver
