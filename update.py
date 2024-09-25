@@ -55,7 +55,7 @@ def main():
                 print("category : " + category)
 
         # 모든 파일을 처리한 후에 <details> 태그 닫기
-        if directory not in ["백준", "프로그래머스"] and len(files) > 0:
+        if directory not in ["백준", "프로그래머스"] :
             content += "\n</details>\n"
 
     with open("README.md", "w") as fd:
