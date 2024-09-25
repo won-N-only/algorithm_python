@@ -14,8 +14,8 @@ def main():
     content = ""
     content += HEADER
     
-    directories = [];
-    solveds = [];
+    directories = []
+    solveds = []
 
     for root, dirs, files in os.walk("."):
         dirs.sort()
@@ -54,10 +54,9 @@ def main():
                 solveds.append(category)
                 print("category : " + category)
 
-        # <details> 태그 닫기
-        if directory not in ["백준", "프로그래머스"]:
+        # 모든 파일을 처리한 후에 <details> 태그 닫기
+        if directory not in ["백준", "프로그래머스"] and len(files) > 0:
             content += "\n</details>\n"
-
 
     with open("README.md", "w") as fd:
         fd.write(content)
