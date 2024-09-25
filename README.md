@@ -21,6 +21,7 @@
 |0456-132-pattern|[링크](./Leetcode/0456-132-pattern/NOTES.md)|
 |0560-subarray-sum-equals-k|[링크](./Leetcode/0560-subarray-sum-equals-k/0560-subarray-sum-equals-k.ts)|
 |1266-minimum-time-visiting-all-points|[링크](./Leetcode/1266-minimum-time-visiting-all-points/NOTES.md)|
+|1800-maximum-ascending-subarray-sum|[링크](./Leetcode/1800-maximum-ascending-subarray-sum/README.md)|
 ## 📚 백준
 ### 🚀 Bronze
 | 문제번호 | 링크 |
