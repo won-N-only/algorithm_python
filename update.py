@@ -42,6 +42,7 @@ def main():
                 content += "## 📚 {}\n".format(directory)
             else:
                 content += "### 🚀 {}\n".format(directory)
+                # 목록을 접을 수 있는 <details> 태그 추가
                 content += "<details>\n<summary>문제 목록 보기</summary>\n\n"
                 content += "| 문제번호 | 링크 |\n"
                 content += "| ----- | ----- |\n"
@@ -52,6 +53,11 @@ def main():
                 content += "|{}|[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
                 solveds.append(category)
                 print("category : " + category)
+
+        # <details> 태그 닫기
+        if directory not in ["백준", "프로그래머스"]:
+            content += "\n</details>\n"
+
 
     with open("README.md", "w") as fd:
         fd.write(content)
