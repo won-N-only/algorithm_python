@@ -6,7 +6,8 @@ from urllib import parse
 HEADER="""# 
 # 리트코드, 백준 문제 풀이 목록
 
-git actions을 사용해 만들었습니다
+git actions을 사용해 만들었습니다.
+리트코드에선 TypeScript, 백준에서는 Python3을 이용해 풀이했습니다.
 """
 
 def main():
@@ -41,6 +42,7 @@ def main():
                 content += "## 📚 {}\n".format(directory)
             else:
                 content += "### 🚀 {}\n".format(directory)
+                content += "<details>\n<summary>문제 목록 보기</summary>\n\n"
                 content += "| 문제번호 | 링크 |\n"
                 content += "| ----- | ----- |\n"
             directories.append(directory)
