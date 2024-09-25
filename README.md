@@ -1,8 +1,12 @@
 # 
 # 리트코드, 백준 문제 풀이 목록
 
-git actions을 사용해 만들었습니다
+git actions을 사용해 만들었습니다.
+리트코드에선 TypeScript, 백준에서는 Python3을 이용해 풀이했습니다.
 ### 🚀 Leetcode
+<details>
+<summary>문제 목록 보기</summary>
+
 | 문제번호 | 링크 |
 | ----- | ----- |
 |0001-two-sum|[링크](./Leetcode/0001-two-sum/0001-two-sum.js)|
@@ -35,6 +39,9 @@ git actions을 사용해 만들었습니다
 |3151-special-array-i|[링크](./Leetcode/3151-special-array-i/3151-special-array-i.ts)|
 ## 📚 백준
 ### 🚀 Bronze
+<details>
+<summary>문제 목록 보기</summary>
+
 | 문제번호 | 링크 |
 | ----- | ----- |
 |1000. A＋B|[링크](./%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB/README.md)|
@@ -60,6 +67,9 @@ git actions을 사용해 만들었습니다
 |30802. 웰컴 키트|[링크](./%EB%B0%B1%EC%A4%80/Bronze/30802.%E2%80%85%EC%9B%B0%EC%BB%B4%E2%80%85%ED%82%A4%ED%8A%B8/README.md)|
 |4153. 직각삼각형|[링크](./%EB%B0%B1%EC%A4%80/Bronze/4153.%E2%80%85%EC%A7%81%EA%B0%81%EC%82%BC%EA%B0%81%ED%98%95/%EC%A7%81%EA%B0%81%EC%82%BC%EA%B0%81%ED%98%95.py)|
 ### 🚀 Gold
+<details>
+<summary>문제 목록 보기</summary>
+
 | 문제번호 | 링크 |
 | ----- | ----- |
 |1041. 주사위|[링크](./%EB%B0%B1%EC%A4%80/Gold/1041.%E2%80%85%EC%A3%BC%EC%82%AC%EC%9C%84/%EC%A3%BC%EC%82%AC%EC%9C%84.py)|
@@ -108,11 +118,17 @@ git actions을 사용해 만들었습니다
 |9251. LCS|[링크](./%EB%B0%B1%EC%A4%80/Gold/9251.%E2%80%85LCS/LCS.py)|
 |9252. LCS 2|[링크](./%EB%B0%B1%EC%A4%80/Gold/9252.%E2%80%85LCS%E2%80%852/LCS%E2%80%852.py)|
 ### 🚀 Platinum
+<details>
+<summary>문제 목록 보기</summary>
+
 | 문제번호 | 링크 |
 | ----- | ----- |
 |1725. 히스토그램|[링크](./%EB%B0%B1%EC%A4%80/Platinum/1725.%E2%80%85%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8/%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8.py)|
 |6549. 히스토그램에서 가장 큰 직사각형|[링크](./%EB%B0%B1%EC%A4%80/Platinum/6549.%E2%80%85%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%E2%80%85%EA%B0%80%EC%9E%A5%E2%80%85%ED%81%B0%E2%80%85%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95/%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%E2%80%85%EA%B0%80%EC%9E%A5%E2%80%85%ED%81%B0%E2%80%85%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95.py)|
 ### 🚀 Silver
+<details>
+<summary>문제 목록 보기</summary>
+
 | 문제번호 | 링크 |
 | ----- | ----- |
 |1003. 피보나치 함수|[링크](./%EB%B0%B1%EC%A4%80/Silver/1003.%E2%80%85%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%E2%80%85%ED%95%A8%EC%88%98/README.md)|
