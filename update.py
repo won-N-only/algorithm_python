@@ -3,7 +3,7 @@
 import os
 from urllib import parse
 
-HEADER="""# 
+HEADER = """# 
 # 리트코드, 백준 문제 풀이 목록
 
 git actions을 사용해 만들었습니다.
@@ -38,7 +38,7 @@ def main():
             continue
             
         if directory not in directories:
-            if directory in ["백준", "프로그래머스"]:
+            if directory in ["백준", "프로그래머스","Leetcode"]:
                 content += "## 📚 {}\n".format(directory)
             else:
                 content += "### 🚀 {}\n".format(directory)
@@ -48,11 +48,11 @@ def main():
             directories.append(directory)
 
         for file in files:
-            if category not in solveds:
-                content += "|{}|[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
-                solveds.append(category)
-                print("category : " + category)
-        content += "\n</details>\n"
+            content += "|{}|[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
+
+        # 디렉토리 목록이 끝나면 <details> 태그를 닫음
+        if directory not in ["백준", "프로그래머스","Leetcode"]:
+            content += "\n</details>\n"
 
     with open("README.md", "w") as fd:
         fd.write(content)
