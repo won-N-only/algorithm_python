@@ -176,6 +176,7 @@ LeetCode에서는 TypeScript, 백준에서는 Python3을 이용해 풀이했습�
 |17219. 비밀번호 찾기|[링크](./%EB%B0%B1%EC%A4%80/Silver/17219.%E2%80%85%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8%E2%80%85%EC%B0%BE%EA%B8%B0/README.md)|
 |17626. Four Squares|[링크](./%EB%B0%B1%EC%A4%80/Silver/17626.%E2%80%85Four%E2%80%85Squares/README.md)|
 |1764. 듣보잡|[링크](./%EB%B0%B1%EC%A4%80/Silver/1764.%E2%80%85%EB%93%A3%EB%B3%B4%EC%9E%A1/%EB%93%A3%EB%B3%B4%EC%9E%A1.py)|
+|18111. 마인크래프트|[링크](./%EB%B0%B1%EC%A4%80/Silver/18111.%E2%80%85%EB%A7%88%EC%9D%B8%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8/README.md)|
 |18258. 큐 2|[링크](./%EB%B0%B1%EC%A4%80/Silver/18258.%E2%80%85%ED%81%90%E2%80%852/README.md)|
 |18352. 특정 거리의 도시 찾기|[링크](./%EB%B0%B1%EC%A4%80/Silver/18352.%E2%80%85%ED%8A%B9%EC%A0%95%E2%80%85%EA%B1%B0%EB%A6%AC%EC%9D%98%E2%80%85%EB%8F%84%EC%8B%9C%E2%80%85%EC%B0%BE%EA%B8%B0/%ED%8A%B9%EC%A0%95%E2%80%85%EA%B1%B0%EB%A6%AC%EC%9D%98%E2%80%85%EB%8F%84%EC%8B%9C%E2%80%85%EC%B0%BE%EA%B8%B0.py)|
 |1912. 연속합|[링크](./%EB%B0%B1%EC%A4%80/Silver/1912.%E2%80%85%EC%97%B0%EC%86%8D%ED%95%A9/README.md)|
